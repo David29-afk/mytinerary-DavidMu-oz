@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 function Content(params) {
     return (
-<div className='flex flex-col items-center w-full mt-4'>
-    <div className='h-96 w-full max-w-xl'>
-    <Carrousel></Carrousel>
-    </div>
-
-</div>
+        <div className='flex flex-col items-center w-full mt-4'>
+            <div className='h-96 w-full mb-10 sm:mb-20'> {/* Cambia max-w-xl a w-full */}
+                <Carrousel />
+            </div>
+        </div>
     );
 }
 
@@ -75,38 +74,39 @@ function Carrousel() {
     }, [isManual]);
 
     return (
-        <div className="max-w-4xl mx-auto ">
-            <h2 className="text-center text-2xl font-bold mb-4">Popular Mytineraries</h2>
-            <div className="relative">
-                <div className="overflow-hidden rounded-lg">
-                    {data.map((slide, index) => (
-                        <div
-                            key={index}
-                            className={`absolute inset-0 transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-                        >
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-                                {slide.cities.map((city, idx) => (
-                                    <div key={idx} className="flex flex-col items-center">
-                                        <img src={city.img} alt={city.name} className="w-full h-32 object-cover rounded-lg" />
-                                        <p className="text-center mt-2">{city.name}</p>
-                                    </div>
-                                ))}
+       <div className="max-w-4xl mx-auto">
+    <h2 className="text-center text-2xl font-bold mb-4">Popular Mytineraries</h2>
+    <div className="relative">
+        <div className="overflow-hidden rounded-lg w-3/4 mx-auto"> {/* Cambia el ancho aquí */}
+            {data.map((slide, index) => (
+                <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+                >
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+                        {slide.cities.map((city, idx) => (
+                            <div key={idx} className="flex flex-col items-center">
+                                <img src={city.img} alt={city.name} className="w-full h-32 object-cover rounded-lg" />
+                                <p className="text-center mt-2">{city.name}</p>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-                <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
+            ))}
         </div>
+        <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+</div>
+
     );
 }
 
