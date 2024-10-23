@@ -38,7 +38,7 @@ function Navbar() {
     <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex-shrink-0">
-            <img src="https://logos-world.net/wp-content/uploads/2021/05/Expedia-Symbol.png" alt="Logo" className="h-6" /> {/* Ajusta el tamaño según sea necesario */}
+            <img src="https://logos-world.net/wp-content/uploads/2021/05/Expedia-Symbol.png" alt="Logo" className="h-6" /> 
         </div>
 
         <div className="flex-1 flex justify-center items-center space-x-4 hidden lg:flex">
@@ -85,7 +85,7 @@ function Navbar() {
     {/* Mobile menu */}
     <div 
         className={`fixed top-0 right-0 h-full bg-gray-100 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} duration-300 ease-in-out`}
-        style={{ width: '200px', overflow: 'hidden' }} // Ancho reducido
+        style={{ width: '200px', overflow: 'hidden' }} // Here I reduce the width of my menu
     >
         <div className="flex flex-col items-start p-4">
             <button className="self-end p-2 text-gray-600" onClick={toggleMenu}>

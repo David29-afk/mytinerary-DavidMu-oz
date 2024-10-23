@@ -14,7 +14,7 @@ function CalltoAction(params) {
                 <source src={video} type="video/mp4" />
                 Tu navegador no soporta video.
             </video>
-            <div className="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 bg-gray-700 bg-opacity-20">
+            <div className="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 bg-gray-700 bg-opacity-10">
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                     We invest in the world’s potential
                 </h1>
