@@ -1,23 +1,31 @@
 import React from "react";
+import imagen from '../assets/imagencities.jpg'
+import { CityList } from "../Components/City";
 
 function Cities(params) {
     return (
         <>
-<div className="flex min-h-screen items-center justify-center">
-            <div className="w-1/3">
-                <div className="max-w-sm rounded overflow-hidden shadow-lg animate-pulse">
-                    <div className="h-48 bg-gray-300"></div>
-                    <div className="px-6 py-4">
-                        <div className="h-6 bg-gray-300 mb-2"></div>
-                        <div className="h-4 bg-gray-300 w-2/3"></div>
-                    </div>
-                    <div className="px-6 pt-4 pb-2">
-                        <div className="h-4 bg-gray-300 w-1/4 mb-2"></div>
-                        <div className="h-4 bg-gray-300 w-1/2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section className="relative overflow-hidden">
+    <div className="absolute inset-0 w-full h-full">
+        <img 
+            src={imagen}
+            alt="Background" 
+            className="w-full h-full object-cover" 
+        />
+    </div>
+    <div className="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 bg-gray-700 bg-opacity-10">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+            Discover Amazing Cities
+        </h1>
+        <p className="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48 bg-gray-900 bg-opacity-30 p-4 rounded shadow-lg">
+            Embark on unforgettable adventures tailored by those who know the magic of each destination.
+        </p>
+    </div>
+</section>
+
+
+
+            <CityList />
         </>
     );
 }
