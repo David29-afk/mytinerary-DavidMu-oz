@@ -15,9 +15,12 @@ const CityList = () => {
     }, []);
 
     return (
-        <div className="flex flex-wrap justify-center mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-20">
             {cities.map(city => (
-                <div className="relative flex flex-col justify-center overflow-hidden bg-gray-50 m-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4" key={city._id}>
+                <div 
+                    className="relative flex flex-col justify-center overflow-hidden bg-gray-50 m-4 rounded-xl shadow-xl" 
+                    key={city._id}
+                >
                     <div className="group relative flex h-72 rounded-xl shadow-xl">
                         <div className="z-10 h-full w-full overflow-hidden rounded-xl transition duration-300 ease-in-out group-hover:opacity-100">
                             <img 
@@ -43,6 +46,6 @@ const CityList = () => {
     );
 };
 
-
-
 export { CityList };
+
+
