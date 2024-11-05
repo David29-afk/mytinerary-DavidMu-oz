@@ -14,11 +14,11 @@ function CalltoAction(params) {
                 <source src={video} type="video/mp4" />
                 Tu navegador no soporta video.
             </video>
-            <div className="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 bg-gray-700 bg-opacity-10">
+            <div className="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 ">
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                     We invest in the world’s potential
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48 bg-gray-900 bg-opacity-30 p-4 rounded shadow-lg">
+                <p className="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48 bg-gray-900 bg-opacity-20 p-4 rounded shadow-lg">
     Find your perfect trip, designed by insiders who know and love their cities.
 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
