@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { NavLink } from 'react-router-dom';
 
 
+
 function Header(params) {
     return (
         <>
@@ -59,16 +60,17 @@ function Navbar() {
                 Cities
             </NavLink>
             <div className="flex items-center">
-                <a 
-                    title="Login" 
-                    className="flex items-center text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 border-2 border-transparent rounded-full px-4 py-2 font-medium text-lg"
-                    href="#"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2" stroke="stroke-yellow-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                    </svg>
-                    Login
-                </a>
+            <NavLink 
+    to="/signin" 
+    title="Login" 
+    className="flex items-center text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 border-2 border-transparent rounded-full px-4 py-2 font-medium text-lg"
+>
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2" stroke="stroke-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+    </svg>
+    Login
+</NavLink>
+
             </div>
         </div>
         <button 

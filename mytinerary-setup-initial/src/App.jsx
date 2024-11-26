@@ -6,6 +6,7 @@ import { CityDetails } from './Pages/CityDetails'
 import { NotFound } from './Pages/NotFound'
 import { StandarLayout } from './Layouts/StandarLayout'
 import './App.css'
+import SignIn from './Pages/SingIn'
 
 
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   { element: <StandarLayout></StandarLayout> ,
     children: [
       { path: '/cities', element: <Cities></Cities> },
+      { path: '/signin', element: <SignIn></SignIn> },
       { path: '/cities/:id', element: <CityDetails /> },
       { path: '/', element: <Home></Home> },
       { path: '/home', element: <Home></Home> },

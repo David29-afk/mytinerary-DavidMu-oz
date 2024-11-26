@@ -30,11 +30,11 @@ const CityList = () => {
                             />
                         </div>
                         <div className="absolute bottom-0 z-10 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
-                            <h1 className="font-serif text-2xl font-bold text-white shadow-xl mb-2">{city.name}</h1>
-                            <h2 className="text-sm font-light text-gray-200 shadow-xl mb-4">{city.country}</h2>
+                            <h1 className=" text-2xl font-bold text-white shadow-xl mb-2 city-name">{city.name}</h1>
+                            <h2 className="text-sm font-light text-gray-200 shadow-xl mb-4 city-country">{city.country}</h2>
                             <NavLink 
                                 to={`/cities/${city._id}`} 
-                                className="mt-2 px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700"
+                                className="mt-2 px-4 py-2 text-sm text-white bg-yellow-400 rounded hover:bg-yellow-500"
                             >
                                 View Details
                             </NavLink>
